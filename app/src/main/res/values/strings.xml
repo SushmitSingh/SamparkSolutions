@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SamparkSolutions</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="move_to_right">Move to Right</string>
+    <string name="move_to_left">Move to Left</string>
+</resources>

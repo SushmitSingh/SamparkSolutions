@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <data>
+            <variable
+                name="alphabet"
+                type="com.example.samparksolutions.data.Alphabet" />
+        </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_margin="5dp"
+        android:elevation="4dp"
+        android:shadowColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_view_letter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@{alphabet.letter}"
+            android:layout_margin="5dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/text_view_score"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="A" />
+
+        <TextView
+            android:id="@+id/text_view_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(alphabet.score)}"
+            android:layout_margin="5dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_view_letter"
+            app:layout_constraintEnd_toStartOf="@+id/button_plus"
+            app:layout_constraintStart_toEndOf="@+id/text_view_letter"
+            app:layout_constraintTop_toTopOf="@+id/text_view_letter"
+            tools:text="200" />
+
+        <Button
+            android:id="@+id/button_plus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/plus"
+            android:layout_margin="5dp"
+            android:padding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_minus"
+            app:layout_constraintStart_toEndOf="@+id/text_view_score"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_minus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/minus"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_plus"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
